@@ -1,8 +1,8 @@
-const searchUrl = ('https://metaweather.com/api/location/search/?query=(query)')
+// const searchUrl = ('https://metaweather.com/api/location/search/?query=(query)')
 
-const locationUrl = ('https://metaweather.com/api/location/(woeid)/')
+// const locationUrl = ('https://metaweather.com/api/location/(woeid)/')
 
-const dateUrl = ('https://metaweather.com/api/location/(woeid)/(date)/')
+// const dateUrl = ('https://metaweather.com/api/location/(woeid)/(date)/')
 
 
 
@@ -35,16 +35,16 @@ const searchBar = document.getElementById('searchbar');
 searchBar.addEventListener('submit', (e) => {
     e.preventDefault()
     console.log('hello')
-//     const city = searchBar.children.search.value
-//     fetch(`https//metaweather.com/api/location/search/?query=${city}`)
-//         .then(res => res.json())
-//         .then(data => {
-//             const cityData = data[0]
-//             if (cityData) {
-//                 const woeId = cityData.woeId
-//                 fetch(`https//metaweather.com/api/loation/search/?woeId=${woeId}`)
-//                     .then(res => res.json())
-//                     .then(data => weather(data))
-//             }
-//         })
-// })
+    //     const city = searchBar.children.search.value
+    //     fetch(`https//metaweather.com/api/location/search/?query=${city}`)
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             const cityData = data[0]
+    //             if (cityData) {
+    //                 const woeId = cityData.woeId
+    //                 fetch(`https//metaweather.com/api/loation/search/?woeId=${woeId}`)
+    //                     .then(res => res.json())
+    //                     .then(data => weather(data))
+    //             }
+    //         })
+})
