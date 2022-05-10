@@ -9,18 +9,20 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color:rgb(117, 2, 174);
+    background-color: rgb(117, 2, 174);
 }
-  /* On mouse-over, add a deeper shadow */
+
+/* On mouse-over, add a deeper shadow */
 .card:hover {
-    box-shadow:  8px 16px rgba(73, 65, 65, 0.2);
+    box-shadow: 8px 16px rgba(73, 65, 65, 0.2);
     transition: .5s;
 }
-  /* Add some padding inside the card container */
+
+/* Add some padding inside the card container */
 .container {
     padding: 2px 16px;
     margin: 10px;
-} 
+}
 
 
 
@@ -38,28 +40,33 @@ body {
     font-weight: 400;
     font-style: normal;
     color: rgb(78, 249, 40);
-    background-color:black;
-    background-size:100%;
+    background-color: black;
+    background-size: 100%;
     background-repeat: repeat-y;
     background-attachment: scroll;
     height: 100%;
-    width:100%;
+    width: 100%;
+    display: inline-block;
 }
 
 
-#weather-background{
+#weather-background {
     display: flex;
     color: rgb(241, 228, 228);
     flex-direction: row;
-    align-items: flex-end;
+
+
+
 }
 
-#playlist-background{
+#playlist-background {
     display: flex;
     color: rgb(241, 228, 228);
     flex-direction: row;
-    align-items: flex-end;
+
+
 }
+
 /* #texttime { 
     margin: 1px;
     font-size: 65px;
