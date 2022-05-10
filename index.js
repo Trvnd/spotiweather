@@ -31,6 +31,9 @@
         .then(searchObj => search(searchObj))
 }
 */
+const weatherState = document.createElement('h3')
+const minMax = document.createElement('h4')
+const weatherInfo = document.getElementById('weather-info')
 const searchBar = document.getElementById('searchbar');
 searchBar.addEventListener('submit', (e) => {
     e.preventDefault()
@@ -54,6 +57,8 @@ searchBar.addEventListener('submit', (e) => {
                 })
                     .then(res => res.json())
                     .then(data => weather(data))
+                console.log(weather)
+
             }
         })
 })
