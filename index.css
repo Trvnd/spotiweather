@@ -1,0 +1,194 @@
+.card {
+    /* Add shadows to create the "card" effect */
+    /* box-shadow:  8px 16px rgba(57, 57, 57, 0.2);
+    transition: 0.5s;
+    flex-shrink: 3;
+    width: 1000px; */
+    margin: 20px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color:rgb(117, 2, 174);
+}
+  /* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow:  8px 16px rgba(73, 65, 65, 0.2);
+    transition: .5s;
+}
+  /* Add some padding inside the card container */
+.container {
+    padding: 2px 16px;
+    margin: 10px;
+} 
+
+
+
+/* 
+form#email.h2 {
+    align-items: center;
+
+} */
+
+body {
+    border: 10px white;
+    margin: 10px;
+    height: 100vh;
+    font-family: termina, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(78, 249, 40);
+    background-color:black;
+    background-size:100%;
+    background-repeat: repeat-y;
+    background-attachment: scroll;
+    height: 100%;
+    width:100%;
+}
+
+
+#weather-background{
+    display: flex;
+    color: rgb(241, 228, 228);
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+#playlist-background{
+    display: flex;
+    color: rgb(241, 228, 228);
+    flex-direction: row;
+    align-items: flex-end;
+}
+/* #texttime { 
+    margin: 1px;
+    font-size: 65px;
+    top: 400px;
+    text-align: center;
+
+}
+#movie-details{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+h3.card
+
+h5 {
+    font-size: 18px;
+    color: white;
+}
+h2 {
+    position: 20px;
+    font-size: 30px;
+}
+h3 {
+    position: 13px;
+    font-size: 26px;
+    color: white;
+}
+h4 {
+    font-size: 25px;
+    color: white;
+}
+h6 {
+    font-size: 25px;
+    margin: 1px;
+    color: white;
+}
+
+p{
+    width: 650px; 
+    position: relative;
+    font-family: 'Yanone Kaffeesatz';
+    font-size: x-large;
+    margin: 12px;
+    padding: 2px;
+    color: white;
+}
+img{ 
+    margin: 5px;
+    border-radius: 25px ;
+    width: 375px;
+    height: 625px;
+    resize: both;
+
+}
+
+input#send {
+    border-radius: 25px;
+    padding: 10px;
+    font-family: 'Yanone Kaffeesatz';
+}
+input#Generate {
+    border-radius: 25px;
+    padding: 10px;
+    font-family: 'Yanone Kaffeesatz';
+}
+textarea#new-comment {
+    width: 400px;
+	height: 120px;
+	border: 3px solid #cccccc;
+    border-radius: 20px;
+	padding: 5px;
+    margin:  10px;
+    box-shadow: 6px 4px rgb(201, 164, 164);
+	font-family: 'Yanone Kaffeesatz';
+	background-image: url(bg.gif);
+	background-position: bottom right;
+	background-repeat: no-repeat;
+
+}
+
+textarea#emailaddress {
+
+    border-radius: 10px;
+	padding: 5px;
+    margin:  10px;
+	background-image: url(bg.gif);
+	background-position: bottom right;
+	background-repeat: no-repeat;
+    font-family: 'Yanone Kaffeesatz';
+}
+textarea#message {
+
+    border-radius: 10px;
+	padding: 5px;
+    margin:  10px;
+	background-image: url(bg.gif);
+	background-position: bottom right;
+	background-repeat: no-repeat;
+    font-family: 'Yanone Kaffeesatz';
+}
+input#Submit {
+    border-radius: 25px;
+    padding: 10px;
+    margin-bottom: 40px;
+    font-family: 'Yanone Kaffeesatz';
+    display: wrap;
+    align-items: center;
+    justify-content: center;
+}
+form #new-comment {
+    border: 6px white;
+    align-items: stretch;
+    border: 2px white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-family: 'Yanone Kaffeesatz';
+}
+
+form.button{
+    position: absolute;
+    align-items: center;
+    font-family: 'Yanone Kaffeesatz';
+}
+label#new-comment {
+    position:relative; left:85px; bottom:150px;
+    font-size: 18px;
+    font-family: 'Yanone Kaffeesatz';
+
+}*/
