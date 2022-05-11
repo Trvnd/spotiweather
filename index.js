@@ -31,6 +31,7 @@
         .then(searchObj => search(searchObj))
 }
 */
+document.addEventListener("DOMContentLoaded", function() {
 const searchBar = document.getElementById('searchbar');
 searchBar.addEventListener('submit', (e) => {
     e.preventDefault()
@@ -43,6 +44,7 @@ searchBar.addEventListener('submit', (e) => {
     })
         .then(res => res.json())
         .then(data => {
+            console.log('test')
             const cityData = data[0]
             if (cityData) {
                 const woeId = cityData.woeid
@@ -54,6 +56,27 @@ searchBar.addEventListener('submit', (e) => {
                 })
                     .then(res => res.json())
                     .then(data => weather(data))
+
             }
-        })
+            function weather(data){
+                console.log('test 2')
+                let weatherState = document.createElement('h3')
+                weatherState.textContent = data.weather_state_name
+                let currentTemp = document.createElement('h4')
+                currentTemp = data.the_temp
+                let minTemp = document.createElement('p')
+                minTemp.textContent = data.min_temp
+                let maxTemp = document.createElement('p')
+                maxTemp = data.max_temp
+
+                const weatherDiv = document.getElementById('weather-info')
+                console.log('test 3')
+                weatherDiv.append(weatherState)
+                weatherDiv.append(currentTemp)
+                weatherDiv.append(minTemp)
+                weatherDiv.append(maxTemp)
+            }
+
+    })
+})
 })
