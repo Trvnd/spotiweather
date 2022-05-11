@@ -9,11 +9,8 @@
 <script defer src="index.js"></script>
 
 <body>
-  <header>
-    <h1 id="title">Spotiweather</h1>
-  </header>
 
-  <div id="head-div" class="card">
+  <div id="head-div" class="wrapper">
 
     <!--Title & Search Bar-->
     <div id="forecast">
@@ -24,11 +21,13 @@
       </form>
     </div>
 
+
     <!--Weather Div-->
     <div id="weather-background" class="backcard">
-      <div id="weather-info" class="backcard">
+      <div id="weather-info" class="backcard" >
+        <img id='img' />
       </div>
-      <form action="#" class="filter">
+       <!-- <form action="#" class="filter">
         <label for="days">Filter By Days</label>
         <select name="days" id="days">
           <option value="oneday">One Day Forecast</option>
@@ -36,14 +35,14 @@
           <option value="fiveday">Five Day Forecast</option>
         </select>
         <input type="submit" value="Submit" />
-      </form>
+      </form> > -->
     </div>
 
 
     <!--Playlist Div-->
     <div id="playlist-background" class="playcard">
       <div id="playlist">
-        <h2>Spotify Playlist Here</h2>
+        <h1 id="title">Spotiweather</h1>
         <!--Figure out how to embed playlist here-->
         <iframe style="border-radius:12px"
           src="https://open.spotify.com/embed/playlist/5D3aqqDzsZUEz0S8WTqTHv?utm_source=generator" width="100%"
@@ -53,10 +52,10 @@
     </div>
 
 
-
     <!--New Playlist-->
-    <form id="button">
+    <form id="button" class = "playlist">
       <input type="submit" value="New Playlist" id="new-playlist" />
+   
 
 
   </div>
