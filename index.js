@@ -1,14 +1,11 @@
 
 document.addEventListener("DOMContentLoaded", function() {
 
-    const weatherState = document.createElement('h3')
-    const currentTemp = document.createElement('p')
-    const minTemp = document.createElement('p')
-    const maxTemp = document.createElement('p')
-    //const currentC = document.createElement('p')
-    //const minC = document.createElement('p')
-    //const maxC = document.createElement('p')
-    const weatherInfo = document.getElementById('weather-info')
+    const weatherState = document.createElement('li')
+    const currentTemp = document.createElement('li')
+    const minTemp = document.createElement('li')
+    const maxTemp = document.createElement('li')
+    const weatherInfo = document.getElementById('weather-list')
     const img = document.getElementById('img')
 
 const searchBar = document.getElementById('searchbar');
@@ -35,6 +32,7 @@ searchBar.addEventListener('submit', (e) => {
                 })
                     .then(res => res.json())
                     .then(data => weather(data))
+                    searchBar.reset();
             }
 
             function weather(data) {
@@ -43,25 +41,19 @@ searchBar.addEventListener('submit', (e) => {
                 minTemp.textContent = Math.floor(data.consolidated_weather[0].min_temp)
                 maxTemp.textContent = Math.floor(data.consolidated_weather[0].max_temp) 
 
+                weatherInfo.append(city)
                 weatherInfo.append(weatherState)
 
-                //weatherInfo.append(currentTemp)
-                //weatherInfo.append(minTemp)
-                //weatherInfo.append(maxTemp)
-
-
                 let currentC = currentTemp.textContent
-                let currentF = currentC * 9 / 5 + 32;
-                weatherInfo.append(currentF)
-
-                /*let createMC = document.createElement('p')
+                let currentF = Math.floor(currentC * 9 / 5 + 32);
+                weatherInfo.append(`${currentF} °F`)
                 
-                let maxC = minTemp.textContent
-                let maxF = maxC * 9 / 5 + 32;
+                /*let maxC = minTemp.textContent
+                let maxF = Math.floor(maxC * 9 / 5 + 32);
                 weatherInfo.append(maxF)
 
                 let minC = minTemp.textContent
-                let minF = minC * 9 / 5 + 32;
+                let minF = Math.floor(minC * 9 / 5 + 32);
                 weatherInfo.append(minF)*/
 
                 weatherInfo.append(img)
@@ -90,8 +82,6 @@ searchBar.addEventListener('submit', (e) => {
                 weatherInfo.append(img)
 
             }
-        
         })
-
     })
 })
