@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const weatherInfo = document.getElementById('weather-list')
     const img = document.getElementById('img')
     const searchBar = document.getElementById('searchbar');
+    const message = document.getElementById('title')
+    const playListTitle = document.getElementById('playlist')
 
     searchBar.addEventListener('submit', (e) => {
         e.preventDefault()
@@ -85,6 +87,29 @@ document.addEventListener("DOMContentLoaded", function () {
                     weatherInfo.append(minF)*/
 
 
+                    if (weatherState.textContent === 'Clear') {
+                        message.textContent = 'It\'s gawgeous today, get yurr butt outside!'
+                    } if (weatherState.textContent === 'Light Cloud') {
+                        message.textContent = 'Smol cloud, bring sunglasses and sunscreen outside!'
+                    } if (weatherState.textContent === 'Heavy Cloud') {
+                        message.textContent = 'Lots of cloud coverage, low visability at times'
+                    } if (weatherState.textContent === 'Showers') {
+                        message.textContent = 'Isolated showers, bring an umbrella just in case!'
+                    } if (weatherState.textContent === 'Light Rain') {
+                        message.textContent = 'Light rain on and off, free car wash, yay!'
+                    } if (weatherState.textContent === 'Heavy Rain') {
+                        message.textContent = 'Big fat rain, prep the boat!'
+                    } if (weatherState.textContent === 'Thunderstorm') {
+                        message.textContent = `Don\'t walk around outside with a long metal pole today, like you usually do. Thunderstorms likely!`
+                    } if (weatherState.textContent === 'Hail') {
+                        message.textContent = 'Best to grab the hardhat if you are going outside today, expect hail, along with thunderstorms.'
+                    } if (weatherState.textContent === 'Sleet') {
+                        message.textContent = 'Not quite rain, but not quite snow. Just some baby frozen ice fallilng from the sky today.'
+                    } if (weatherState.textContent === 'Snow') {
+                        message.textContent = 'Time to build a frosty, you\re getting snow today!'
+                    }
+
+                    playListTitle.append(message)
 
                     weatherInfo.append(img)
                     if (weatherState.textContent === 'Clear') {
@@ -109,6 +134,8 @@ document.addEventListener("DOMContentLoaded", function () {
                         img.src = 'http://openweathermap.org/img/wn/13d@2x.png'
 
                     }
+
+
 
                     weatherInfo.append(img)
 
