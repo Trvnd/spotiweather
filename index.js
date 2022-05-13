@@ -1,11 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+
     let appTitle = document.getElementById('weather-title')
     appTitle.addEventListener("mouseover", function (event) {
-        event.target.style.color = "Red";
+        event.target.style.color = "White";
         setTimeout(function () {
             event.target.style.color = "";
-        }, 1000);
+        }, 1500);
     }, false);
 
 
@@ -22,8 +23,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const searchBar = document.getElementById('searchbar');
     const message = document.getElementById('title')
     const playListTitle = document.getElementById('playlist')
-    
-
+    const spotifyPlaylist = document.getElementById('playlist-background')
+    const iframe = document.createElement('iframe')
+    iframe.src = ''
     searchBar.addEventListener('submit', (e) => {
         e.preventDefault()
         weatherInfo.innerHTML = ''
@@ -82,9 +84,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     if (weatherState.textContent === 'Clear') {
                         message.textContent = 'It\'s gawgeous today, get yurr butt outside!'
                     } if (weatherState.textContent === 'Light Cloud') {
-                        message.textContent = 'Smol cloud, bring sunglasses and sunscreen outside!'
+                        message.textContent = 'Smol cloud,but might still need ya shades outside!'
                     } if (weatherState.textContent === 'Heavy Cloud') {
-                        message.textContent = 'Lots of cloud coverage, low visability at times'
+                        message.textContent = 'Lots of cloud coverage, not a great day to getcha tan on.'
                     } if (weatherState.textContent === 'Showers') {
                         message.textContent = 'Isolated showers, bring an umbrella just in case!'
                     } if (weatherState.textContent === 'Light Rain') {
@@ -98,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     } if (weatherState.textContent === 'Sleet') {
                         message.textContent = 'Not quite rain, but not quite snow. Just some baby frozen ice fallilng from the sky today.'
                     } if (weatherState.textContent === 'Snow') {
-                        message.textContent = 'Time to build a frosty, you\re getting snow today!'
+                        message.textContent = 'Time to hang with frosty, you\re getting snow today!'
                     }
 
                     playListTitle.append(message)
@@ -128,9 +130,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     }
                     weatherInfo.append(img)
 
-                    const spotifyPlaylist = document.getElementById('spotify')
-                    const appendPlaylist = document.createElement('iframe')
-                    //spotifyPlaylist.append(appendPlaylist)
+                    // const spotifyPlaylist = document.getElementById('spotify')
+                    // const appendPlaylist = document.createElement('iframe')
+                    // spotifyPlaylist.append(appendPlaylist)
 
                     if (weatherState.textContent === 'Clear') {
                         iframe.src = 'https://open.spotify.com/embed/playlist/0nXXUlBpqAW9sJngHEiNyW?utm_source=generator'
@@ -155,9 +157,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     }
 
-                    console.log(spotifyPlaylist.append(appendPlaylist))
+                    spotifyPlaylist.append(iframe)
 
-                
+
+
 
                 }
 

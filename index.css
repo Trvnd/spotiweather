@@ -7,7 +7,7 @@
 }
 
 .wrapper:hover {
-  box-shadow:  8px 16px rgba(73, 65, 65, 0.2);
+  box-shadow: 8px 16px rgba(73, 65, 65, 0.2);
   transition: .5s;
 }
 
@@ -44,7 +44,7 @@
   padding-left: 40px;
 
   padding-right: 20px;
-  
+
 
 }
 
@@ -92,7 +92,7 @@
   margin-top: 28px;
 
   margin-left: 101px;
-;
+  ;
 
 }
 
@@ -243,9 +243,9 @@ body {
 
   background-color: rgb(250, 221, 152);
 
-  background-image:url('https://64.media.tumblr.com/8a9f9f1c663730b0cd2c848d16e3053c/tumblr_ommbmm3pKp1rnbw6mo1_1280.gifv');
+  background-image: url('https://64.media.tumblr.com/8a9f9f1c663730b0cd2c848d16e3053c/tumblr_ommbmm3pKp1rnbw6mo1_1280.gifv');
 
-  background-size:100%;
+  background-size: 100%;
 
   background-repeat: repeat-y;
 
@@ -257,6 +257,6 @@ body {
 
   height: 100%;
 
-  width:100%;
+  width: 100%;
 
 }
