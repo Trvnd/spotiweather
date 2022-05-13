@@ -1,5 +1,23 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+    let appTitle = document.getElementById('weather-title')
+    appTitle.addEventListener("mouseover", function (event) {
+        event.target.style.color = "Red";
+        setTimeout(function () {
+            event.target.style.color = "";
+        }, 1000);
+    }, false);
+
+
+    let messageTitle = document.getElementById('title')
+    messageTitle.addEventListener("mouseover", function (event) {
+        event.target.style.color = "White";
+        setTimeout(function () {
+            event.target.style.color = "";
+        }, 1500);
+    }, false);
+
+
     const weatherInfo = document.getElementById('weather-list')
     const img = document.getElementById('img')
     const searchBar = document.getElementById('searchbar');
@@ -9,7 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
     searchBar.addEventListener('submit', (e) => {
         e.preventDefault()
         weatherInfo.innerHTML = ''
-        //console.log('hello')
 
         const city = searchBar.children.search.value
 
@@ -20,7 +37,6 @@ document.addEventListener("DOMContentLoaded", function () {
         })
             .then(res => res.json())
             .then(data => {
-                //console.log('test')
                 const cityData = data[0]
                 if (cityData) {
                     const woeId = cityData.woeid
@@ -72,27 +88,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-                    /*let maxC = minTemp.textContent
-    
-                    let maxF = Math.floor(maxC * 9 / 5 + 32);
-    
-                    weatherInfo.append(maxF)
-    
-    
-    
-                    let minC = minTemp.textContent
-    
-                    let minF = Math.floor(minC * 9 / 5 + 32);
-    
-                    weatherInfo.append(minF)*/
-
-
                     if (weatherState.textContent === 'Clear') {
-                        message.textContent = 'It\'s gawgeous today, get yurr butt outside!'
+                        message.textContent = 'It\'s gawgeous today, get yurr butt outside!',
+                            message.src = 
                     } if (weatherState.textContent === 'Light Cloud') {
-                        message.textContent = 'Smol cloud, bring sunglasses and sunscreen outside!'
+                        message.textContent = 'Smol cloud, might still need shades if you\'re going outside today!'
                     } if (weatherState.textContent === 'Heavy Cloud') {
-                        message.textContent = 'Lots of cloud coverage, low visability at times'
+                        message.textContent = 'Lots of cloud coverage, not the best time to get a tan.'
                     } if (weatherState.textContent === 'Showers') {
                         message.textContent = 'Isolated showers, bring an umbrella just in case!'
                     } if (weatherState.textContent === 'Light Rain') {
@@ -106,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     } if (weatherState.textContent === 'Sleet') {
                         message.textContent = 'Not quite rain, but not quite snow. Just some baby frozen ice fallilng from the sky today.'
                     } if (weatherState.textContent === 'Snow') {
-                        message.textContent = 'Time to build a frosty, you\re getting snow today!'
+                        message.textContent = 'Time to hang with frosty, you\re getting snow today!'
                     }
 
                     playListTitle.append(message)
