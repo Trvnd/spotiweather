@@ -1,30 +1,17 @@
 .wrapper {
-
   display: grid;
-
-  grid-template-columns: repeat(6, 1fr);
-
+  grid-auto-columns: repeat(6, 1fr);
   row-gap: 1em;
-
   grid-auto-rows: repeat(8, 1fr);
-
   justify-content: center;
-
 }
 
-
-
-/*.wrapper:hover {
-
+.wrapper:hover {
   box-shadow:  8px 16px rgba(73, 65, 65, 0.2);
-
   transition: .5s;
+}
 
-}*/
-
-
-
-h2 {
+#weather-title {
 
   font-family: termina, sans-serif;
 
@@ -32,9 +19,17 @@ h2 {
 
   font-style: normal;
 
-  color: rgb(69, 245, 21);
+  color: rgb(31, 22, 17);
 
-  background-color: black;
+  background-color: transparent;
+
+  margin-top: 35px;
+
+  margin-bottom: 20px;
+
+  margin-left: 94px;
+
+  justify-content: center;
 
 }
 
@@ -42,23 +37,18 @@ h2 {
 
 #forecast {
 
-  grid-column: 2;
-
-  grid-row: 2;
-
-  margin: 20px;
-
   border-radius: 10px;
 
   justify-content: center;
 
-  padding: 10px;
+  padding-left: 40px;
+
+  padding-right: 20px;
+  
 
 }
 
-
-
-button.search {
+#searchbar {
 
   position: absolute;
 
@@ -70,9 +60,39 @@ button.search {
 
   font-style: normal;
 
-  color: rgb(78, 249, 40);
+  color: rgb(26, 20, 16);
 
-  background-color: black;
+
+  display: inline-block;
+
+  padding: 0.3em 1.2em;
+
+  margin: 0 0.1em 0.1em 0;
+
+  border-radius: 2em;
+
+  box-sizing: border-box;
+
+  text-decoration: none;
+
+  font-family: termina, sans-serif;
+
+  font-weight: 400;
+
+  font-style: normal;
+
+  color: #FFFFFF;
+
+  background-color: rgb(235, 170, 30);
+
+  text-align: center;
+
+  transition: all 0.2s;
+
+  margin-top: 28px;
+
+  margin-left: 101px;
+;
 
 }
 
@@ -80,19 +100,27 @@ button.search {
 
 .backcard {
 
-  grid-column: 2;
-
-  grid-row: 3;
-
   /*margin: 5px;
 
   padding-left: 10px;*/
 
-  margin: 20px;
+  grid-row: 2;
 
-  background-color: rgb(117, 2, 174);
+  margin: 111px;
 
-  padding: 50px;
+  background-color: rgb(245, 205, 110);
+
+  padding: 142px;
+
+  border-radius: 30px;
+
+  margin-top: 28px;
+
+  margin-left: 101px;
+
+  margin-top: 28px;
+
+  margin-left: 101px;
 
 }
 
@@ -100,7 +128,7 @@ button.search {
 
 .backcard:hover {
 
-  box-shadow: 8px 16px rgba(10, 237, 40, 0.2);
+  box-shadow: 8px 16px rgba(191, 75, 29, 0.2);
 
   transition: .5s;
 
@@ -116,29 +144,18 @@ button.search {
 
   font-style: normal;
 
-  color: rgb(2, 8, 1);
+  color: rgb(4, 5, 4);
 
-  font-size: larger;
+  font-size: medium;
 
   justify-content: center;
 
-
-
-  /*justify-content: center;
-
-  margin: 10px;
-
-  border-radius: 10px;*/
 
 }
 
 
 
 .filter {
-
-  grid-column: 1;
-
-  grid-row: 2;
 
   /*margin: 20px;
 
@@ -150,7 +167,7 @@ button.search {
 
 
 
-h1 {
+h3 {
 
   font-family: termina, sans-serif;
 
@@ -158,7 +175,7 @@ h1 {
 
   font-style: normal;
 
-  color: rgb(78, 249, 40);
+  color: rgb(54, 31, 14);
 
   grid-column: 6;
 
@@ -176,19 +193,23 @@ h1 {
 
 .playcard {
 
-  grid-column: 4 / 6;
+  grid-column: 4;
 
-  grid-row: 2 / 4;
+  grid-row: 2;
 
   margin: 5px;
 
-  /*border-radius: 30px;*/
+  border-radius: 30px;
 
-  background-color: rgb(5, 0, 6);
+  background-color: rgb(245, 205, 110);
 
   justify-content: center;
 
   padding: 50px;
+
+  margin-left: 101px;
+
+  margin-right: 28px;
 
 }
 
@@ -201,68 +222,12 @@ h1 {
 }
 
 
-
 .playlist {
-
-  grid-column: 4 / 5;
-
-  grid-row: 4 / 5;
 
   justify-content: right;
 
 }
 
-
-
-#new-playlist {
-
-  display: inline-block;
-
-  padding: 0.3em 1.2em;
-
-  margin: 0 0.1em 0.1em 0;
-
-  border: 0.16em solid rgba(255, 255, 255, 0);
-
-  border-radius: 2em;
-
-  box-sizing: border-box;
-
-  text-decoration: none;
-
-  font-family: termina, sans-serif;
-
-  font-weight: 400;
-
-  font-style: normal;
-
-  color: #FFFFFF;
-
-  background-color: rgb(117, 2, 174);
-
-  text-align: center;
-
-  transition: all 0.2s;
-
-}
-
-#new-playlist:hover {
-
-  background-color: #f600dd;
-
-}
-
-@media all and (max-width:5em) {
-
-  #new-playlist {
-
-    display: block;
-
-    margin: 0.2em auto;
-
-  }
-
-}
 
 
 
@@ -274,26 +239,24 @@ body {
 
   font-style: normal;
 
-  color: rgb(5, 16, 2);
+  color: rgb(30, 25, 11);
 
-  background-color: black;
+  background-color: rgb(250, 221, 152);
 
-  /*background-size:100%;
+  background-image:url('https://64.media.tumblr.com/8a9f9f1c663730b0cd2c848d16e3053c/tumblr_ommbmm3pKp1rnbw6mo1_1280.gifv');
+
+  background-size:100%;
 
   background-repeat: repeat-y;
 
   background-attachment: scroll;
 
-  border: 10px white;
-
   margin: 10px;
 
-  height: 100vh;
+  height: 100px;
 
   height: 100%;
 
   width:100%;
-
-  */
 
 }
